@@ -11,12 +11,14 @@ using namespace std;
 class dealer: public person
 {
 public:
+  dealer();
   void shuffle();
   void deal();
   void giveCard();
   void play();
   virtual void leaveTable();
   virtual void printStatus();
+  ~dealer();
 private:
 };
 #endif
