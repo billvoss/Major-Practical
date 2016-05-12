@@ -1,6 +1,6 @@
-#include dealer.h
-#include person.h
-#include player.h
+#include "person.h"
+#include "dealer.h"
+#include "player.h"
 
 #include <iostream>
 
