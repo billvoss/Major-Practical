@@ -2,6 +2,8 @@
 #define person_h
 
 #include <string>
+#include <vector>
+#include <iostream>
 using namespace std;
 
 //Abtract class

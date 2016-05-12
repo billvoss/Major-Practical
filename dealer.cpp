@@ -1,8 +1,9 @@
 #include "person.h"
 #include "dealer.h"
 
-#include <iostream>
 #include <string>
+#include <vector>
+#include <iostream>
 using namespace std;
 
 dealer::dealer()
@@ -17,13 +18,15 @@ dealer::dealer()
   }
 }
 
-leaveTable()
+void leaveTable()
 {
 
 }
 
-printStatus()
+void printStatus()
 {
   cout<<"I am a dealer."<<endl
   cout<<"Name:"<<name<<endl;
 }
+
+dealer::~dealer()

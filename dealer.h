@@ -1,6 +1,11 @@
 #ifndef dealer_h
 #define dealer_h
 
+#include <string>
+#include <vector>
+#include <iostream>
+using namespace std;
+
 class dealer: public person
 {
 public:

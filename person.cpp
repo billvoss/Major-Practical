@@ -2,6 +2,7 @@
 #include "person.h"
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 person::string getName()	//Return the name of the dealer or the participant
