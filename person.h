@@ -20,9 +20,9 @@ public:
 	virtual void printStatus(); //Prints different information for each participants and the dealer
 protected:
 	vector<int> cards[];
-private:
 	string name;
 	int age;
 	double money;
+private:
 };
 #endif

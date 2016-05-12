@@ -25,8 +25,8 @@ void leaveTable()
 
 void printStatus()
 {
-  cout<<"I am a dealer."<<endl
-  cout<<"Name:"<<name<<endl;
+  cout<<"I am a dealer."<<endl;
+  cout<<"Name:"<<name<endl;
 }
 
 dealer::~dealer()

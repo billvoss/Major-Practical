@@ -1,6 +1,8 @@
 #ifndef dealer_h
 #define dealer_h
 
+#include "person.h"
+
 #include <string>
 #include <vector>
 #include <iostream>
