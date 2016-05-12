@@ -1,5 +1,5 @@
-#ifndef dealer_h
-#define dealer_h
+#ifndef DEALER_h
+#define DEALER_h
 
 #include "person.h"
 
@@ -16,8 +16,6 @@ public:
   void deal();
   void giveCard();
   void play();
-  virtual void leaveTable();
-  virtual void printStatus();
   ~dealer();
 private:
 };

@@ -14,7 +14,7 @@ dealer::dealer()
   {
     for(int card = 1;card<53;card++)
     {
-      cards.push_back(card);
+      cards.push_back(i*card);
     }
   }
 }

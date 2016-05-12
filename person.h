@@ -1,5 +1,5 @@
-#ifndef person_h
-#define person_h
+#ifndef PERSON_h
+#define PERSON_h
 
 #include <string>
 #include <vector>
