@@ -1,0 +1,53 @@
+BLACKJACK
+
+This program models a casino in which (a) games(s) of blackjack are occuring.
+It models the existance of the various tables and their requisite dealers, as well varying numbers of player on each table.
+The dealer can perform various functions, such as dealing cards, shuffling the deck, and playing his/her own hand.
+The dealer automatically plays in an simplictic optimum manner, as do real dealers.
+
+The players do not automatically play in an optimum manner, although a function can be invoked which automatically
+'card counts' and suggests the probabalistically optimum move.
+
+The program uses four classes: table, person, player and dealer. Player and dealer inherit behaviour from person.
+The person class is abstract. The player and dealer classes exhibit polymorphic behaviour.
+
+
+CLASSES
+
+table
+  The table class encapsulates a dealer and some number of players, held in an array.
+  Functions:
+  table(dealer1) The constructor for table requires a dealer object
+  getID() As multiple tables can be in existance, each has a unique ID
+  printpeople() Prints all information of people currently seated at the table
+  Variables:
+  ID  As above
+
+
+person
+  The person class holds various personal information, as well as the cards held and money remaining
+  Functions:
+  getName() Returns name
+  getAge()  Returns age
+  getMoney()  Returns money
+  setName() Sets name
+  setAge()  Sets age
+  addMoney()  Add money to funds available
+  virtual leaveTable()  This function is virtual as different actions are performed for player and dealer.
+  virtual printStatus() This function is virtual as different actions are performed for player and dealer.
+
+player
+  The player class inherits from person. The player can perform player actions: reciving cards, sit, fold and bet.
+  Functions:
+  receiveCard()  Requests a card from the dealer. The giveCard() dealer function is called with this function.
+  fold()  Accept loss of hand, withdraw.
+  sit() End turn.
+  bet() Add some amount of money to the table.
+
+dealer
+  The dealer class inherits from person. The dealer can perform dealer actions: shuffle, deal, give cards and play cards.
+  Functions:
+  shuffle() Randomises the order of the cards
+  deal()  Deals the first card to every player present
+  giveCard()  Gives a card to a player, called with recieveCard() player function.
+  play()  Plays to or past 17, then compares with the hands of players. Transfers funds appropriately.
