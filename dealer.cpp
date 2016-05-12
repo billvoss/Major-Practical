@@ -21,7 +21,7 @@ dealer::dealer()
 
 void leaveTable()
 {
-
+ cout<<"hi";
 }
 
 void printStatus()
