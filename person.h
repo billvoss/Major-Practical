@@ -1,6 +1,9 @@
 #ifndef person_h
 #define person_h
 
+#include <string>
+using namespace std;
+
 //Abtract class
 class person
 {

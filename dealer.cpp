@@ -1,9 +1,8 @@
 #include "person.h"
 #include "dealer.h"
-#include "player.h"
 
 #include <iostream>
-
+#include <string>
 using namespace std;
 
 dealer::dealer()
