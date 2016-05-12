@@ -18,7 +18,7 @@ table
   The table class encapsulates a dealer and some number of players, held in an array.
   Functions:
   table(dealer1) The constructor for table requires a dealer object
-  getID() As multiple tables can be in existance, each has a unique ID
+  getID() As multiple tables can be in existence, each has a unique ID
   printpeople() Prints all information of people currently seated at the table
   Variables:
   ID  As above
