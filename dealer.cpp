@@ -1,0 +1,13 @@
+dealer::dealer()
+{
+}
+
+leaveTable()
+{
+
+}
+
+printStatus()
+{
+  
+}
