@@ -6,7 +6,7 @@ The dealer can perform various functions, such as dealing cards, shuffling the d
 The dealer automatically plays in an simplictic optimum manner, as do real dealers.
 
 The players do not automatically play in an optimum manner, although a function can be invoked which automatically
-'card counts' and suggests the probabalistically optimum move.
+'card counts' and suggests the probabilistically optimum move.
 
 The program uses four classes: table, person, player and dealer. Player and dealer inherit behaviour from person.
 The person class is abstract. The player and dealer classes exhibit polymorphic behaviour.

@@ -1,5 +1,5 @@
-#ifndef PERSON_h
-#define PERSON_h
+#ifndef PERSON_H
+#define PERSON_H
 
 #include <string>
 #include <vector>
@@ -9,8 +9,9 @@ using namespace std;
 //Abtract class
 class person
 {
+	
 public:
-	person();
+	person(string p_name,int p_age,double p_money);
 	string getName();  //Returns the name of the person
 	int getAge(); //Returns the age of the person
 	double getMoney(); //Retruns the amount of money in cents

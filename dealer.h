@@ -1,5 +1,5 @@
-#ifndef DEALER_h
-#define DEALER_h
+#ifndef DEALER_H
+#define DEALER_H
 
 #include "person.h"
 
@@ -11,11 +11,14 @@ using namespace std;
 class dealer: public person
 {
 public:
-  dealer();
+  dealer(string p_name, int p_age);
   void shuffle();
   void deal();
-  void giveCard();
+  void sendCard();
+  void recieveCard();
   void play();
+  void leaveTable();
+  void printStatus();
   ~dealer();
 private:
 };
