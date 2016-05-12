@@ -2,6 +2,7 @@
 #define PLAYER_H
 
 #include "person.h"
+#include "dealer.h"
 
 #include <string>
 #include <vector>
@@ -15,9 +16,12 @@ public:
   player(string p_name, int p_age, double p_money);
   void leaveTable();
   void printStatus();
+  void setDealer(dealer* p);
   void sendCard();
   void receiveCard();
   ~player();
 private:
+  dealer* my_dealer;
+  vector<int> cardsplayer;
 };
 #endif

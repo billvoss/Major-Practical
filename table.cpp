@@ -25,6 +25,7 @@ int table::getNumberPlayers()
 void table::addPlayer(player p)
 {
 	players[numberplayers] = &p;
+	p.setDealer(the_dealer);
 	numberplayers++;
 }
 

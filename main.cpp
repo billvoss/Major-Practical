@@ -14,5 +14,10 @@ int main()
   player player1("Bill",18,3000);
   table1.addPlayer(player1);
 
-  cout<<table1.getNumberPlayers();
+  player1.receiveCard();
+
+  //dealer* ptr = &dealer1;
+  //cout<<*(ptr->sendCard());
+  //player1.printStatus();
+  //cout<<table1.getNumberPlayers();
 }

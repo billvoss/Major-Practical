@@ -14,12 +14,13 @@ public:
   dealer(string p_name, int p_age);
   void shuffle();
   void deal();
-  void sendCard();
+  int* sendCard();
   void recieveCard();
   void play();
   void leaveTable();
   void printStatus();
   ~dealer();
 private:
+  vector<int> cards;
 };
 #endif

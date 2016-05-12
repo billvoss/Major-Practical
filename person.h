@@ -9,7 +9,7 @@ using namespace std;
 //Abtract class
 class person
 {
-	
+
 public:
 	person(string p_name,int p_age,double p_money);
 	string getName();  //Returns the name of the person
@@ -22,7 +22,7 @@ public:
 	virtual void printStatus()=0; //Prints different information for each participants and the dealer
 	~person();
 protected:
-	vector<int> cards;
+	//vector<int> cards;
 	string name;
 	int age;
 	double money;

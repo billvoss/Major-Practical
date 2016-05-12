@@ -12,8 +12,6 @@ using namespace std;
 
 class table
 {
-	friend class player;
-	friend class person;
 public:
 	table(dealer game_dealer); //class constructor receieves a dealer object
 	void addPlayer(player p);
