@@ -2,7 +2,7 @@
 #define person_h
 
 //Abtract class
-class person : public table //person class inherits from the table class
+class person
 {
 public:
 	string getName();  //Returns the name of the person
