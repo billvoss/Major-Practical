@@ -1,3 +1,6 @@
+#ifndef dealer_h
+#define dealer_h
+
 class dealer: public person
 {
 public:
@@ -8,4 +11,5 @@ public:
   virtual void leaveTable();
   virtual void printStatus();
 private:
-}
+};
+#endif
