@@ -13,6 +13,6 @@ protected:
 private:
 	static int ID;
 	int table_id;
-	dealer my_dealer
+	dealer *my_dealer
 };
 #endif
