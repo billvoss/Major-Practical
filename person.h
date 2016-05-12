@@ -16,7 +16,7 @@ public:
 	virtual void leaveTable() =0; //pure virtual function. Function have different meaning from particpants and dealer
 	virtual void printStatus(); //Prints different information for each participants and the dealer
 protected:
-	vector<string> cards[][];
+	vector<int> cards[];
 private:
 	string name;
 	double money;
