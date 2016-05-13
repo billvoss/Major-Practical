@@ -9,10 +9,10 @@ using namespace std;
 
 int table::ID=0;
 
-table::table(dealer game_dealer)
+table::table(dealer* game_dealer)
 :table_id(ID)
 {
-	the_dealer = &game_dealer;
+	the_dealer = game_dealer;
 	numberplayers = 0;
 	ID++;
 }
@@ -22,10 +22,10 @@ int table::getNumberPlayers()
 	return numberplayers;
 }
 
-void table::addPlayer(player p)
+void table::addPlayer(player* p)
 {
-	players[numberplayers] = &p;
-	p.setDealer(the_dealer);
+	players[numberplayers] = p;
+	p->setDealer(the_dealer);
 	numberplayers++;
 }
 

@@ -14,7 +14,6 @@ player::player(string p_name, int p_age, double p_money)
 
 void player::leaveTable()
 {
-
 }
 
 void player::setDealer(dealer* p)
@@ -24,7 +23,7 @@ void player::setDealer(dealer* p)
 
 void player::receiveCard()
 {
-  cout<<*(my_dealer->sendCard());
+  cards.push_back(*(my_dealer->sendCard()));
 }
 
 void player::printStatus()
@@ -33,12 +32,12 @@ void player::printStatus()
   cout<<"Name: "<<name<<endl;
   cout<<"Age: "<<age<<endl;
   cout<<"Money: "<<money<<endl;
-  cout<<"Number of cards: "<<cardsplayer.size()<<endl;
+  cout<<"Number of cards: "<<cards.size()<<endl;
   cout<<"Current cards:"<<endl;
 
-  for(int i=0;i<cardsplayer.size();i++)
+  for(int i=0;i<cards.size();i++)
   {
-    switch(cardsplayer[i])
+    switch(cards[i])
     {
       case 1:
       cout<<"A♣"<<endl;

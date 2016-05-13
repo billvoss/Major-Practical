@@ -8,16 +8,31 @@ using namespace std;
 
 int main()
 {
+
   dealer dealer1("Alex",18);
-  table table1(dealer1);
+  dealer1.shuffle();
+
+  table table1(&dealer1);
 
   player player1("Bill",18,3000);
-  table1.addPlayer(player1);
 
+  table1.addPlayer(&player1);
+  player1.receiveCard();
+  player1.receiveCard();
+  player1.printStatus();
+
+  dealer1.shuffle();
+  player1.receiveCard();
   player1.receiveCard();
 
-  //dealer* ptr = &dealer1;
-  //cout<<*(ptr->sendCard());
-  //player1.printStatus();
-  //cout<<table1.getNumberPlayers();
+  player1.printStatus();
+
+  player player2("Alex",18,40000);
+
+  table1.addPlayer(&player2);
+  player2.receiveCard();
+  player2.receiveCard();
+  player2.printStatus();
+
+
 }

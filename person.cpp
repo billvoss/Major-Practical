@@ -31,7 +31,7 @@ void person::setName(string p_name)	//Set the name of the dealer or the particip
 	name = p_name;
 }
 
-void person::setAge(double p_age)	//Set the age of the person or the participant
+void person::setAge(int p_age)	//Set the age of the person or the participant
 {
 	age = p_age;
 }

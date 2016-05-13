@@ -15,12 +15,10 @@ public:
   void shuffle();
   void deal();
   int* sendCard();
-  void recieveCard();
   void play();
   void leaveTable();
   void printStatus();
   ~dealer();
 private:
-  vector<int> cards;
 };
 #endif

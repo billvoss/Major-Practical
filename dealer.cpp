@@ -26,16 +26,13 @@ void dealer::shuffle()
 
 void dealer::leaveTable()
 {
-
 }
 
 int* dealer::sendCard()
 {
-  cout<<"Card sent!"<<endl;
   int* tempcard = new int;
-  *tempcard = 42;
-  //*tempcard = cards.back();
-  //cards.pop_back();
+  *tempcard = cards.back();
+  cards.pop_back();
   return tempcard;
 }
 
@@ -214,5 +211,4 @@ void dealer::printStatus()
 
 dealer::~dealer()
 {
-
 }

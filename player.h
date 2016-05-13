@@ -17,11 +17,9 @@ public:
   void leaveTable();
   void printStatus();
   void setDealer(dealer* p);
-  void sendCard();
   void receiveCard();
   ~player();
 private:
   dealer* my_dealer;
-  vector<int> cardsplayer;
 };
 #endif
