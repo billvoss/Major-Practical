@@ -24,9 +24,16 @@ int table::getNumberPlayers()
 
 void table::addPlayer(player* p)
 {
-	players[numberplayers] = p;
-	p->setDealer(the_dealer);
-	numberplayers++;
+	if(numberplayers<6)
+	{
+		players[numberplayers] = p;
+		p->setDealer(the_dealer);
+		numberplayers++;
+	}
+	else
+	{
+		cout<<"The table is full, new player not added."<<endl;
+	}
 }
 
 int table::getID()

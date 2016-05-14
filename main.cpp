@@ -30,6 +30,12 @@ int main()
   player player2("Alex",18,40000);
 
   table1.addPlayer(&player2);
+  table1.addPlayer(&player2);
+  table1.addPlayer(&player2);
+  table1.addPlayer(&player2);
+  table1.addPlayer(&player2);
+  table1.addPlayer(&player2);
+  table1.addPlayer(&player2);
   player2.receiveCard();
   player2.receiveCard();
   player2.printStatus();
