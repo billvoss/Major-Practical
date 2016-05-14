@@ -23,7 +23,9 @@ void player::setDealer(dealer* p)
 
 void player::receiveCard()
 {
-  cards.push_back(*(my_dealer->sendCard()));
+  int* tempcard = my_dealer->sendCard();
+  cards.push_back(*tempcard);
+  delete tempcard;
 }
 
 void player::printStatus()
