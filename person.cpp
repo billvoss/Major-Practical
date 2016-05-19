@@ -1,8 +1,14 @@
+
 #include "person.h"
 #include <iostream>
+#include <stdlib.h>
 #include <string>
 #include <vector>
 using namespace std;
+
+person::person()
+{
+}
 
 person::person(string p_name,int p_age,double p_money)
 :name(p_name),
@@ -12,6 +18,8 @@ money(p_money)
 	if(p_age<18)
 	{
 		cout<<"Sorry, this person is under 18 and cannot play"<<endl;
+		cout<<"Program will now exit. Please re-run program and remove the underage person"<<endl;
+		exit(0);
 	}
 }
 
