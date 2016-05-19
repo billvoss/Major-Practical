@@ -19,7 +19,6 @@ public:
 	int getID(); //Return the table ID number
 	dealer* getDealer();
 	~table(); //class destructor
-
 protected:
 private:
 	static int ID;

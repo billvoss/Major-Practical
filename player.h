@@ -17,9 +17,10 @@ public:
   void leaveTable();
   void printStatus();
   void setDealer(dealer* p);
-  void receiveCard();
+  void receiveCard(double wager);
   ~player();
 private:
+  double current_wager;
   dealer* my_dealer;
 };
 #endif

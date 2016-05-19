@@ -20,5 +20,6 @@ public:
   void printStatus();
   ~dealer();
 private:
+  vector<int> mycards;
 };
 #endif
