@@ -17,8 +17,12 @@ int main(int argc, char* argv[])
 {
   string stringinput;
   int numberinput;
+  int counter_1;
+  int counter_2;
+  int counter_3;
   int numberplayers;
   double doubleinput;
+  player players[5];
 
   cout<<"Welcome to Blackjack. Would you like to play? y/n"<<endl;
   cin>>stringinput;
@@ -40,43 +44,79 @@ int main(int argc, char* argv[])
     dealer1.shuffle();
   }
   table table1(&dealer1);
-
-  cout<<"For your first player, what is their:\nName:";
-  cin>>stringinput;
-  cout<<"Age:";
-  cin>>numberinput;
-  player player1(stringinput,numberinput,0);
-  table1.addPlayer(&player1);
-  cout<<"For your second player, what is their:\nName:";
-  cin>>stringinput;
-  cout<<"Age:";
-  cin>>numberinput;
-  player player2(stringinput,numberinput,0);
-  table1.addPlayer(&player2);
-  cout<<"For your third player, what is their:\nName:";
-  cin>>stringinput;
-  cout<<"Age:";
-  cin>>numberinput;
-  player player3(stringinput,numberinput,0);
-  table1.addPlayer(&player3);
-  cout<<"For your fourth player, what is their:\nName:";
-  cin>>stringinput;
-  cout<<"Age:";
-  cin>>numberinput;
-  player player4(stringinput,numberinput,0);
-  table1.addPlayer(&player4);
-  cout<<"For your fifth player, what is their:\nName:";
-  cin>>stringinput;
-  cout<<"Age:";
-  cin>>numberinput;
-  player player5(stringinput,numberinput,0);
-  table1.addPlayer(&player5);
-
-  player players[5]={player1,player2,player3,player4,player5};
-
+  
+  cout<<"The number of players: ";
+  cin>>numberplayers;
+  player* temp = new player[numberplayers];
+  counter_2 = 0;
+  counter_3 = 0;
+  
+  if(counter_2 < numberplayers)
+  {
+    cout<<"For your first player, what is their:\nName:";
+    cin>>stringinput;
+    cout<<"Age:";
+    cin>>numberinput;
+    player player1(stringinput,numberinput,0);
+    table1.addPlayer(&player1);
+    temp[counter_3] = player1;
+    counter_3++;
+    counter_2++;
+  }
+  if(counter_2 < numberplayers)
+  {
+    cout<<"For your second player, what is their:\nName:";
+    cin>>stringinput;
+    cout<<"Age:";
+    cin>>numberinput;
+    player player2(stringinput,numberinput,0);
+    table1.addPlayer(&player2);
+    temp[counter_3] = player2;
+    counter_3++;
+    counter_2++;
+  }
+  if(counter_2 < numberplayers)
+  {
+    cout<<"For your third player, what is their:\nName:";
+    cin>>stringinput;
+    cout<<"Age:";
+    cin>>numberinput;
+    player player3(stringinput,numberinput,0);
+    table1.addPlayer(&player3);
+    temp[counter_3] = player3;
+    counter_3++;
+    counter_2++;
+  }
+  if(counter_2 <numberplayers)
+  {
+    cout<<"For your fourth player, what is their:\nName:";
+    cin>>stringinput;
+    cout<<"Age:";
+    cin>>numberinput;
+    player player4(stringinput,numberinput,0);
+    table1.addPlayer(&player4);
+    temp[counter_3] = player4;
+    counter_3++;
+    counter_2++;
+  }
+  if(counter_2 <numberplayers)
+  {
+    cout<<"For your fifth player, what is their:\nName:";
+    cin>>stringinput;
+    cout<<"Age:";
+    cin>>numberinput;
+    player player5(stringinput,numberinput,0);
+    table1.addPlayer(&player5);
+    temp[counter_3] = player5;
+  }
+  
+  for(counter_1=0; counter<numberplayers; counter++)
+  {
+    players[counter_1]= *(temp + i);
+  }
   int anothercard = 1;
 
-  for(int i=0; i<5; i++)
+  for(int i=0; i<numberplayers; i++)
   {
     players[i].receiveCard(0);
     cout<<"\n"<<players[i].getName()<<", you have received your first card. Your current status is:\n";
@@ -109,7 +149,7 @@ cout<<"Continue to results? y/n"<<endl;
 cin>>stringinput;
 if(stringinput == "y")
 {
-  for(int i=0; i<5; i++)
+  for(int i=0; i<numberplayers; i++)
   {
     if(players[i].getCardsValue()<22)
     {
@@ -128,7 +168,7 @@ else
   return 0;
 }
 
-
+  delete [] player;
 
 }
 /*
