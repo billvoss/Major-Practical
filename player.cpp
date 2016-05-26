@@ -8,6 +8,10 @@
 #include <iomanip>
 using namespace std;
 
+player::player() : person()
+{
+}
+
 player::player(string p_name, int p_age, double p_money)
 :person(p_name, p_age, p_money),
 current_wager(0),
