@@ -13,6 +13,7 @@ class player: public person
 {
   friend class table;
 public:
+  player();
   player(string p_name, int p_age, double p_money);
   void leaveTable();
   void printStatus();
