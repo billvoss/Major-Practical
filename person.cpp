@@ -4,6 +4,10 @@
 #include <vector>
 using namespace std;
 
+person::person()
+{
+}
+
 person::person(string p_name,int p_age,double p_money)
 :name(p_name),
 age(p_age),
