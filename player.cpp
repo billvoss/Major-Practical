@@ -19,10 +19,6 @@ cards_value(0)
 {
 }
 
-void player::leaveTable()
-{
-}
-
 double player::getWager()
 {
   return current_wager;
@@ -66,6 +62,7 @@ void player::printStatus()
 {
   cout.setf(ios::fixed);
   cout.setf(ios::showpoint);
+  cout.precision(2);
   cout<<"Current total wager : "<<current_wager<<endl;
   cout<<"Current cards:"<<endl;
   this->printCards(cards);

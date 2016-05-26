@@ -45,10 +45,6 @@ void dealer::shuffle()
   random_shuffle(cards.begin(),cards.end());
 }
 
-void dealer::leaveTable()
-{
-}
-
 int* dealer::sendCard()
 {
   int* tempcard = new int;

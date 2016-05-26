@@ -1,4 +1,3 @@
-#include <iostream>
 #include "person.h"
 #include "dealer.h"
 #include "player.h"
@@ -7,9 +6,6 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include <time.h>
-#include <stdlib.h>
-#include <algorithm>
 
 using namespace std;
 
@@ -45,13 +41,13 @@ int main(int argc, char* argv[])
     dealer1.shuffle();
   }
   table table1(&dealer1);
-  
+
   cout<<"The number of players: ";
   cin>>numberplayers;
   player* temp = new player[numberplayers];
   counter_2 = 0;
   counter_3 = 0;
-  
+
   if(counter_2 < numberplayers)
   {
     cout<<"For your first player, what is their:\nName:";
@@ -159,8 +155,9 @@ if(stringinput == "y" || "Y")
         cout<<"Congratulations "<<players[i].getName()<<",  you beat the dealer."<<endl;
         cout<<"You have made a profit of $"<<players[i].getWager()<<endl;
         players[i].addMoney(players[i].getWager());
+        cout.precision(2);
         cout<<"You now have $"<<players[i].getMoney()<<endl;
-	flag = false;
+	      flag = false;
       }
     }
   }
@@ -179,24 +176,3 @@ delete [] temp;
 return 0;
 
 }
-/*
-cout<<"\nThank you.\nHow many players would you like at your table?:";
-cin>>numberplayers;
-switch(numberplayers)
-{
-  case 5:
-  table1.addPlayer(&player5);
-  cout<<"Player5 added"<<endl;
-  case 4:
-  table1.addPlayer(&player5);
-  cout<<"Player4 added"<<endl;
-  case 3:
-  table1.addPlayer(&player5);
-  cout<<"Player3 added"<<endl;
-  case 2:
-  table1.addPlayer(&player5);
-  cout<<"Player2 added"<<endl;
-  case 1:
-  table1.addPlayer(&player5);
-  cout<<"Player1 added"<<endl;
-*/

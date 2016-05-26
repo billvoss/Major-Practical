@@ -16,7 +16,6 @@ public:
   void deal();
   int* sendCard();
   int play();
-  void leaveTable();
   void printStatus();
   ~dealer();
 private:

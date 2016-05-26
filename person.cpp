@@ -4,19 +4,21 @@
 #include <vector>
 using namespace std;
 
+//Trivial person constructor
 person::person()
 {
 }
 
+//Person construcotr with name, age and money
 person::person(string p_name,int p_age,double p_money)
-:name(p_name),
+:name(p_name),	//Private variables are set to appropriate values
 age(p_age),
 money(p_money)
 {
+	//Scolds user if player is under 18
 	if(p_age<18)
 	{
-		cout<<"Sorry, this person is under 18 and cannot play"<<endl;
-		exit(0);
+		cout<<"Sorry, this person is under 18 and should not play"<<endl;
 	}
 }
 
