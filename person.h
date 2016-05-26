@@ -28,7 +28,5 @@ protected:
 	int age;
 	double money;
 	vector<int> cards;
-private:
-
 };
 #endif

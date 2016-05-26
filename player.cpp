@@ -10,12 +10,24 @@ using namespace std;
 
 player::player(string p_name, int p_age, double p_money)
 :person(p_name, p_age, p_money),
-current_wager(0)
+current_wager(0),
+cards_value(0)
 {
 }
 
 void player::leaveTable()
 {
+}
+
+double player::getWager()
+{
+  return current_wager;
+}
+
+int player::getCardsValue()
+{
+  cards_value = cardsValue(cards);
+  return cards_value;
 }
 
 void player::setDealer(dealer* p)
@@ -31,7 +43,7 @@ void player::receiveCard(double wager)
   delete tempcard;
 }
 
-void player::printStatus()
+void player::printAllStatus()
 {
   cout<<"\nI am a player."<<endl;
   cout<<"Name: "<<name<<endl;
@@ -44,6 +56,16 @@ void player::printStatus()
   cout<<"Current value of cards: "<<this->cardsValue(cards)<<endl;
   cout<<"Current cards:"<<endl;
   this->printCards(cards);
+}
+
+void player::printStatus()
+{
+  cout.setf(ios::fixed);
+  cout.setf(ios::showpoint);
+  cout<<"Current total wager : "<<current_wager<<endl;
+  cout<<"Current cards:"<<endl;
+  this->printCards(cards);
+  cout<<endl;
 }
 
 player::~player()

@@ -12,6 +12,7 @@ money(p_money)
 	if(p_age<18)
 	{
 		cout<<"Sorry, this person is under 18 and cannot play"<<endl;
+		exit(0);
 	}
 }
 

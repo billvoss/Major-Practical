@@ -15,7 +15,7 @@ public:
   void shuffle();
   void deal();
   int* sendCard();
-  void play();
+  int play();
   void leaveTable();
   void printStatus();
   ~dealer();

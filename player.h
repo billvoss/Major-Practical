@@ -16,11 +16,15 @@ public:
   player(string p_name, int p_age, double p_money);
   void leaveTable();
   void printStatus();
+  void printAllStatus();
+  double getWager();
+  int getCardsValue();
   void setDealer(dealer* p);
   void receiveCard(double wager);
   ~player();
 private:
   double current_wager;
+  int cards_value;
   dealer* my_dealer;
 };
 #endif
