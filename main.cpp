@@ -22,6 +22,7 @@ int main(int argc, char* argv[])
   int counter_3;
   int numberplayers;
   double doubleinput;
+  bool flag = true;
   player players[5];
 
   cout<<"Welcome to Blackjack. Would you like to play? y/n"<<endl;
@@ -109,10 +110,10 @@ int main(int argc, char* argv[])
     table1.addPlayer(&player5);
     temp[counter_3] = player5;
   }
-  
-  for(counter_1=0; counter<numberplayers; counter++)
+
+  for(counter_1=0; counter_1<numberplayers; counter_1++)
   {
-    players[counter_1]= *(temp + i);
+    players[counter_1]= *(temp + counter_1);
   }
   int anothercard = 1;
 
@@ -147,7 +148,7 @@ int dealervalue = dealer1.play();
 
 cout<<"Continue to results? y/n"<<endl;
 cin>>stringinput;
-if(stringinput == "y")
+if(stringinput == "y" || "Y")
 {
   for(int i=0; i<numberplayers; i++)
   {
@@ -159,16 +160,23 @@ if(stringinput == "y")
         cout<<"You have made a profit of $"<<players[i].getWager()<<endl;
         players[i].addMoney(players[i].getWager());
         cout<<"You now have $"<<players[i].getMoney()<<endl;
+	flag = false;
       }
     }
   }
 }
 else
 {
+  delete [] temp;
   return 0;
 }
-
-  delete [] player;
+if(flag)
+{
+ cout<<"\n"<<"Dealer wins"<<endl;;
+ cout<<"Gameover"<<endl;
+}
+delete [] temp;
+return 0;
 
 }
 /*
