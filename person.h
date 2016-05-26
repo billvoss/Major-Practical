@@ -11,6 +11,7 @@ class person
 {
 
 public:
+	person();
 	person(string p_name,int p_age,double p_money);
 	string getName();  //Returns the name of the person
 	int getAge(); //Returns the age of the person
