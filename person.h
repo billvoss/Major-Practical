@@ -12,21 +12,32 @@ class person
 
 public:
 	person();
-	person(string p_name,int p_age,double p_money);	//Person constructor takes name, age and money
-	string getName();  //Returns the name of the person
-	int getAge(); //Returns the age of the person
-	double getMoney(); //Returns the amount of money
-	void setName(string p_name); //Sets the name of the person
-	void setAge(int p_age); //Sets the age of the person
-	void addMoney(double add_money); //Add money to the particiapnt funds
-	virtual void printStatus()=0; //Prints different information for each participants and the dealer
-	int cardsValue(vector<int> cards); //Calculates the value of the cards currently held
-	void printCards(vector<int> cards); //Prints the card currently held
+	//Person constructor takes name, age and money
+	person(string p_name,int p_age,double p_money);
+	//Returns the name of the person
+	string getName();
+	//Returns the age of the person
+	int getAge();
+	//Returns the amount of money
+	double getMoney();
+	//Sets the name of the person
+	void setName(string p_name);
+	//Sets the age of the person
+	void setAge(int p_age);
+	//Add money to the participant funds
+	void addMoney(double add_money);
+	//Prints different information for each participants and the dealer
+	virtual void printStatus()=0;
+	//Calculates the value of the cards currently held
+	int cardsValue(vector<int> cards);
+	//Prints the card currently held
+	void printCards(vector<int> cards);
 	~person();
 protected:
 	string name;
 	int age;
 	double money;
-	vector<int> cards;	//Player initally holds no cards, so this is an empty vector
+	//Player initally holds no cards, this is an empty vector
+	vector<int> cards;
 };
 #endif

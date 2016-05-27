@@ -13,18 +13,27 @@ using namespace std;
 class table
 {
 public:
-	table(dealer* game_dealer); //class constructor receieves a dealer object
+	//Constructor receieves a dealer pointer
+	table(dealer* game_dealer);
+	//Adds player to table
 	void addPlayer(player* p);
+	//Returns number of players
 	int getNumberPlayers();
-	int getID(); //Return the table ID number
+	//Return the table ID number
+	int getID();
+	//Returns the location of the dealer
 	dealer* getDealer();
-	~table(); //class destructor
-protected:
+	//Trivial destructor
+	~table();
 private:
+	//Static table ID
 	static int ID;
+	//Specific table ID
 	int table_id;
+	//Dealer location
 	dealer* the_dealer;
 	int numberplayers;
+	//Array of players
 	player* players[5];
 };
 #endif

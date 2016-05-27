@@ -9,7 +9,7 @@ person::person()
 {
 }
 
-//Person construcotr with name, age and money
+//Person constructor with name, age and money
 person::person(string p_name,int p_age,double p_money)
 :name(p_name),	//Private variables are set to appropriate values
 age(p_age),
@@ -22,40 +22,49 @@ money(p_money)
 	}
 }
 
-string person::getName()	//Return the name of the dealer or the participant
+//Return the name of the dealer or the player
+string person::getName()
 {
 	return name;
 }
 
-int person::getAge()	//Return the age of the dealer or the participant
+//Return the age of the dealer or the player
+int person::getAge()
 {
 	return age;
 }
 
+//Return the money of the dealer or the player
 double person::getMoney()
 {
 	return money;
 }
 
-void person::setName(string p_name)	//Set the name of the dealer or the participant
+//Set the name of the dealer or the participant
+void person::setName(string p_name)
 {
 	name = p_name;
 }
 
-void person::setAge(int p_age)	//Set the age of the person or the participant
+//Set the age of the person or the participant
+void person::setAge(int p_age)
 {
 	age = p_age;
 }
 
-void person::addMoney(double add_money)	//Add money to the dealer or particpant fund
+//Add money to the dealer or particpant fund
+void person::addMoney(double add_money)
 {
 	money += add_money;
 }
 
+//Summates the value of all of the cards currently held
 int person::cardsValue(vector<int> cards)
 {
+	//Resets the value counter
 	int cards_value = 0;
 
+	//Iterates over every element in the cards vector
 	for(int i=0;i<cards.size();i++)
 	{
 		switch(cards[i])
@@ -221,8 +230,10 @@ int person::cardsValue(vector<int> cards)
 	return cards_value;
 }
 
+//Prints a list of the cards currently held
 void person::printCards(vector<int> cards)
 {
+	//Iterates over every element in the cards vector
 	for(int i=0;i<cards.size();i++)
 	{
 		switch(cards[i])
@@ -387,6 +398,7 @@ void person::printCards(vector<int> cards)
 	}
 }
 
+//Trivial person destructor
 person::~person()
 {
 }
